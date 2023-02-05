@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { MouseEventHandler, useState } from "react";
+import "./App.css";
+import form1 from "./form1.json";
+import form2 from "./form2.json";
+import { Form } from "./components/Form";
+import { IForm } from "./interfaces/IForm";
 
 function App() {
+  const onClickFirst: MouseEventHandler<HTMLButtonElement> = (e) => {
+    setInput(form1.form as IForm);
+  };
+
+  const onClickSecond: MouseEventHandler<HTMLButtonElement> = (e) => {
+    setInput(form2.form as IForm);
+  };
+
+  const [input, setInput] = useState<IForm>(form1.form as IForm);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="choice">
+        <button onClick={onClickFirst}>Form1</button>
+        <button onClick={onClickSecond}>Form2</button>
+      </div>
+      <Form input={input} />
     </div>
   );
 }

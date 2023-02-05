@@ -1,38 +1,65 @@
 .App {
+
+}
+
+.choice {
+  margin-bottom: 10px;
+}
+
+.filler {
   text-align: center;
+  margin-bottom: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  max-width: 500px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form .item:not(:last-child) {
+  margin-bottom: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.item {
+  display: grid;
+  grid-template-areas: 
+  "label input"
+  ". error";
+  grid-template-columns: auto 1fr;
+  gap: 0 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.item-label {
+  grid-area: label;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-input {
+  grid-area: input;
 }
+
+input[type="checkbox"] {
+  margin: 0 0 0 10px;
+  transform: scale(1.2);
+}
+
+.checkbox {
+  margin-bottom: 10px;
+}
+
+.error {
+  grid-area: error;
+  color: #bf1650;
+}
+
+.error::before {
+  display: inline;
+  content: "⚠ ";
+}
+
+.radio {
+  margin-bottom: 10px;
+}
+
