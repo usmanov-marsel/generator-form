@@ -1,4 +1,3 @@
-import React from "react";
 import { typeItemForm } from "../interfaces/IForm";
 import Button from "./Button";
 import Checkbox from "./Checkbox";

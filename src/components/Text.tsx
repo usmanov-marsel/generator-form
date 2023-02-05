@@ -1,4 +1,4 @@
-import React, { DetailedHTMLProps, HTMLAttributes, useEffect } from "react";
+import { DetailedHTMLProps, HTMLAttributes } from "react";
 import { useFormContext } from "react-hook-form";
 import { ITypeText } from "../interfaces/ITypeText";
 import cn from "classnames";

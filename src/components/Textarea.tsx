@@ -1,4 +1,4 @@
-import React, { DetailedHTMLProps, HTMLAttributes } from "react";
+import { DetailedHTMLProps, HTMLAttributes } from "react";
 import { useFormContext } from "react-hook-form";
 import { ITypeTextarea } from "../interfaces/ITypeTextarea";
 

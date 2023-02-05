@@ -1,5 +1,4 @@
-import React, { DetailedHTMLProps, HTMLAttributes } from "react";
-import { useFormContext } from "react-hook-form";
+import { DetailedHTMLProps, HTMLAttributes } from "react";
 import { ITypeButton } from "../interfaces/ITypeButton";
 
 interface IButton extends DetailedHTMLProps<HTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {

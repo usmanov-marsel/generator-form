@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState } from "react";
+import { MouseEventHandler, useState } from "react";
 import "./App.css";
 import form1 from "./form1.json";
 import form2 from "./form2.json";
